@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/Section-3.css">
     <link rel="stylesheet" href="css/Section-4.css">
     <link rel="stylesheet" href="css/Section-5.css">
+    <link rel="stylesheet" href="css/Section_calculate.css">
     
     <style>
         
@@ -35,15 +36,6 @@
         }
 
     </style>
-    <script>
-        function Report(){
-            var report = document.getElementById("report");
-            var name = document.getElementById("name").value;
-            var email = document.getElementById("email").value;
-            var message = document.getElementById("message").value;
-            report.innerHTML = '<div class= "container rounded-5 p-4" style = "background-color : #FFFFFF";><b>Thanks for the response!</b><p>The following are your respond :<br> Name : ' + name + ' <br> Email : ' + email + '<br> My Message : </p>' + message + "</div";
-        };
-    </script>
 </head>
 <body>
     <nav class="navbar sticky-top py-0">
@@ -123,6 +115,29 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="section-calculate p-3">
+            <h1 class="h1 text-center mt-3 mb-0">Kalkulator Sampah Plastik</h1>
+            <p class="text-center mt-0 pt-0 mb-3">Kira - kira berapa banyak sampah plastik yang anda kumpulkan dalam setahun ?</p>
+            <div class="container-sampah m-0 p-0" id="container-sampah">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Botol Plastik</span>
+                    <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" id="1">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Sedotan</span>
+                    <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" id="2">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Puntung Rokok</span>
+                    <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" id="3">
+                </div>
+            </div>
+            <button type="button" class="btn rounded m-2" onclick="Calculate()">Calculate</button>
+            <button type="button" class="btn rounded m-2" onclick="Add()">Add Item</button>
+            <div class="add" id="add"></div>
+            <div class="result" id="result"></div>
         </div>
 
         <div class="section-4">
@@ -242,6 +257,6 @@
             </div>
         
         </div>
-
+        <script src="js/customJS.js"></script>
 </body>
 </html>
